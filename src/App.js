@@ -1,19 +1,59 @@
 import React, { Component } from 'react';
+import styled, { keyframes } from 'styled-components';
+
 import logo from './logo.svg';
-import './App.css';
+
+const rotate360 = keyframes`
+from { transform: rotate(0deg); }
+to { transform: rotate(360deg); }
+`;
+
+const Container = styled.div.withConfig({
+  displayName: 'Container',
+})`
+  text-align: center;
+`;
+
+const Header = styled.header.withConfig({
+  displayName: 'Header',
+})`
+  background-color: #222;
+  color: white;
+  height: 150px;
+  padding: 20px;
+`;
+
+const Logo = styled.img.withConfig({
+  displayName: 'Logo',
+})`
+  animation: ${rotate360} infinite 20s linear;
+  height: 80px;
+`;
+
+const Title = styled.h1.withConfig({
+  displayName: 'Title',
+})`
+  font-size: 1.5em;
+`;
+
+const Intro = styled.p.withConfig({
+  displayName: 'Intro',
+})`
+  font-size: large;
+`;
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
+      <Container>
+        <Header>
+          <Logo src={logo} alt="logo" />
+          <Title>Welcome to React</Title>
+        </Header>
+        <Intro>
           To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+        </Intro>
+      </Container>
     );
   }
 }

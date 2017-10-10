@@ -6,7 +6,8 @@
   "dependencies": {
     "react": "^16.0.x",
     "react-dom": "^16.0.x",
-    "react-scripts": "1.0.x"
+    "react-scripts": "1.0.x",
+    "styled-components": "^2.2.x"
   },
   "scripts": {
     "start": "react-scripts start",
