@@ -3,6 +3,8 @@ import styled, { keyframes } from 'styled-components';
 
 import logo from './logo.svg';
 
+import Header from './presentation/Header';
+
 const rotate360 = keyframes`
 from { transform: rotate(0deg); }
 to { transform: rotate(360deg); }
@@ -14,8 +16,8 @@ const Container = styled.div.withConfig({
   text-align: center;
 `;
 
-const Header = styled.header.withConfig({
-  displayName: 'Header',
+const AppHeader = styled.header.withConfig({
+  displayName: 'AppHeader',
 })`
   background-color: #222;
   color: white;
@@ -46,10 +48,11 @@ class App extends Component {
   render() {
     return (
       <Container>
-        <Header>
+        <Header />
+        <AppHeader>
           <Logo src={logo} alt="logo" />
           <Title>Welcome to React</Title>
-        </Header>
+        </AppHeader>
         <Intro>
           To get started, edit <code>src/App.js</code> and save to reload.
         </Intro>
