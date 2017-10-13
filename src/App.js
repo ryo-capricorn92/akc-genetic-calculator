@@ -11,7 +11,7 @@ class App extends Component {
     return (
       <div>
         <Header />
-        <Splash>A slim and trim genetic calculator<br />to make your breeding life a little easier</Splash>
+        <Splash>A slim and trim genetic calculator<br />to make your life just a little easier</Splash>
       </div>
     );
   }

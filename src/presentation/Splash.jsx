@@ -15,7 +15,7 @@ const Container = styled.div.withConfig({
 const Img = styled.div.withConfig({
   displayName: 'Img',
 })`
-  background: white url('img/home.jpg') no-repeat fixed center;
+  background: #fff url('img/home.jpg') no-repeat fixed center;
   background-size: cover;
   height: 400px;
   left: 0;
@@ -27,10 +27,10 @@ const Img = styled.div.withConfig({
 const Overlay = styled.div.withConfig({
   displayName: 'Overlay',
 })`
-  background: #78767a;
+  background: #000;
   height: 400px;
   left: 0;
-  opacity: 0.4;
+  opacity: 0.3;
   position: absolute;
   top: 0;
   width: 100vw;
@@ -39,7 +39,7 @@ const Overlay = styled.div.withConfig({
 const Text = styled.span.withConfig({
   displayName: 'Text',
 })`
-  color: white;
+  color: #fff;
   font-family: 'Open Sans', sans-serif;
   font-size: 24px;
   font-weight: 900;

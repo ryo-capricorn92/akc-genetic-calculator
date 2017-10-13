@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const Container = styled.div.withConfig({
   displayName: 'Container',
 })`
-  background-color: white;
+  background-color: #fff;
   box-shadow: inset 0px 4px 0px #563F7A;
   display: flex;
   height: 90px;
@@ -24,7 +24,7 @@ const NavLink = styled.div.withConfig({
 
   &:hover {
     background-color: #563F7A;
-    color: white;
+    color: #fff;
     cursor: pointer;
   }
 `;
