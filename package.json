@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://ryo-capricorn92.github.io/akc-genetic-calculator/",
   "dependencies": {
+    "font-awesome": "^4.7.0",
     "react": "^16.0.x",
     "react-dom": "^16.0.x",
     "react-scripts": "1.0.x",

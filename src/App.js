@@ -3,57 +3,40 @@ import styled, { keyframes } from 'styled-components';
 
 import logo from './logo.svg';
 
-const rotate360 = keyframes`
-from { transform: rotate(0deg); }
-to { transform: rotate(360deg); }
-`;
+import Header from './presentation/Header';
+import Showcase from './presentation/Showcase';
+import Splash from './presentation/Splash';
 
-const Container = styled.div.withConfig({
-  displayName: 'Container',
+const ShowcaseContainer = styled.div.withConfig({
+  displayName: 'ShowcaseContainer',
 })`
-  text-align: center;
-`;
+  display: flex;
+  padding: 35px;
+  justify-content: center;
 
-const Header = styled.header.withConfig({
-  displayName: 'Header',
-})`
-  background-color: #222;
-  color: white;
-  height: 150px;
-  padding: 20px;
-`;
-
-const Logo = styled.img.withConfig({
-  displayName: 'Logo',
-})`
-  animation: ${rotate360} infinite 20s linear;
-  height: 80px;
-`;
-
-const Title = styled.h1.withConfig({
-  displayName: 'Title',
-})`
-  font-size: 1.5em;
-`;
-
-const Intro = styled.p.withConfig({
-  displayName: 'Intro',
-})`
-  font-size: large;
+  & section + section {
+    margin-left: 35px;
+  }
 `;
 
 class App extends Component {
   render() {
     return (
-      <Container>
-        <Header>
-          <Logo src={logo} alt="logo" />
-          <Title>Welcome to React</Title>
-        </Header>
-        <Intro>
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </Intro>
-      </Container>
+      <div>
+        <Header />
+        <Splash>A slim and trim genetic calculator<br />to make your life just a little easier</Splash>
+        <ShowcaseContainer>
+          <Showcase>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas auctor, nisi et pharetra fermentum, massa augue semper purus, consequat mollis felis diam eu tortor. Suspendisse potenti. Curabitur id dapibus metus. Quisque et lectus quis ipsum fermentum porta. Duis blandit elementum diam, quis viverra sapien mattis feugiat. Suspendisse potenti. Fusce tincidunt augue tortor, a auctor nisl finibus sit amet. Sed neque ipsum, lobortis in vehicula at, dapibus id massa. Quisque consectetur iaculis neque in vestibulum. Mauris risus libero, maximus vestibulum scelerisque ut, suscipit sit amet justo. Cras at ex eget lectus rutrum laoreet sit amet sit amet metus.
+          </Showcase>
+          <Showcase>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas auctor, nisi et pharetra fermentum, massa augue semper purus, consequat mollis felis diam eu tortor. Suspendisse potenti. Curabitur id dapibus metus. Quisque et lectus quis ipsum fermentum porta. Duis blandit elementum diam, quis viverra sapien mattis feugiat. Suspendisse potenti. Fusce tincidunt augue tortor, a auctor nisl finibus sit amet. Sed neque ipsum, lobortis in vehicula at, dapibus id massa. Quisque consectetur iaculis neque in vestibulum. Mauris risus libero, maximus vestibulum scelerisque ut, suscipit sit amet justo. Cras at ex eget lectus rutrum laoreet sit amet sit amet metus.
+          </Showcase>
+          <Showcase>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas auctor, nisi et pharetra fermentum, massa augue semper purus, consequat mollis felis diam eu tortor. Suspendisse potenti. Curabitur id dapibus metus. Quisque et lectus quis ipsum fermentum porta. Duis blandit elementum diam, quis viverra sapien mattis feugiat. Suspendisse potenti. Fusce tincidunt augue tortor, a auctor nisl finibus sit amet. Sed neque ipsum, lobortis in vehicula at, dapibus id massa. Quisque consectetur iaculis neque in vestibulum. Mauris risus libero, maximus vestibulum scelerisque ut, suscipit sit amet justo. Cras at ex eget lectus rutrum laoreet sit amet sit amet metus.
+          </Showcase>
+        </ShowcaseContainer>
+      </div>
     );
   }
 }
