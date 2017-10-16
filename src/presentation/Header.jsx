@@ -32,8 +32,8 @@ const NavLink = styled.div.withConfig({
 const Header = () => (
   <Container>
     <NavLink>Home</NavLink>
-    <NavLink>Calculator</NavLink>
     <NavLink>About</NavLink>
+    <NavLink>Calculator</NavLink>
     <NavLink>Contact</NavLink>
   </Container>
 );
