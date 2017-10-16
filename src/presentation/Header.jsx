@@ -50,9 +50,9 @@ const DummyLink = styled.span.withConfig({
 
 const Header = () => (
   <Container>
-    <Link to="/">Home</Link>
+    <Link to="home">Home</Link>
     <DummyLink>About</DummyLink>
-    <Link to="Calculator">Calculator</Link>
+    <Link to="calculator">Calculator</Link>
     <DummyLink>Contact</DummyLink>
   </Container>
 );

@@ -1,9 +1,13 @@
 import React from 'react';
-import { Route, BrowserRouter as Router } from 'react-router-dom';
+import { Redirect, Route, BrowserRouter as Router } from 'react-router-dom';
 
 import Calculator from './presentation/Calculator';
 import Header from './presentation/Header';
 import Home from './presentation/Home';
+
+const HomeRedirect = () => (
+  <Redirect to="home" />
+);
 
 class App extends React.Component {
   render() {
@@ -11,7 +15,8 @@ class App extends React.Component {
       <Router>
         <div>
           <Header />
-          <Route exact path={process.env.PUBLIC_URL + '/'} component={Home} />
+          <Route exact path={process.env.PUBLIC_URL + '/'} component={HomeRedirect} />
+          <Route path={process.env.PUBLIC_URL + '/home'} component={Home} />
           <Route path={process.env.PUBLIC_URL + '/calculator'} component={Calculator} />
         </div>
       </Router>
