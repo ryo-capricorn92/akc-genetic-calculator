@@ -1,12 +1,13 @@
 {
   "extends": "airbnb",
   "globals": {
-    "beforeAll": false,
-    "beforeEach": false,
     "describe": false,
     "expect": false,
     "fetch": false,
     "it": false,
     "jest": false
+  },
+  "rules": {
+    "jsx-a11y/anchor-is-valid": "off"
   }
 }
