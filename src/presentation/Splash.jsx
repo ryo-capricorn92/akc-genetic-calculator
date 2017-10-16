@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
 
@@ -57,5 +58,9 @@ const Splash = ({ children }) => (
     <Text>{ children }</Text>
   </Container>
 );
+
+Splash.propTypes = {
+  children: PropTypes.oneOf([PropTypes.node, PropTypes.string]).isRequired,
+};
 
 export default Splash;
