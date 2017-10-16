@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
 
@@ -40,10 +41,21 @@ const Button = styled.button.withConfig({
 const Showcase = ({ children, link }) => (
   <Container>
     { children }
-    <Button type="button">
-      <i className="fa fa-chevron-right fa-2x" />
-    </Button>
+    { link ? (
+      <Button type="button">
+        <i className="fa fa-chevron-right fa-2x" />
+      </Button>
+    ) : undefined }
   </Container>
 );
+
+Showcase.defaultProps = {
+  link: null,
+};
+
+Showcase.propTypes = {
+  children: PropTypes.oneOf([PropTypes.node, PropTypes.string]).isRequired,
+  link: PropTypes.string,
+};
 
 export default Showcase;
