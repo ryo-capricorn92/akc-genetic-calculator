@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Container = styled.div.withConfig({
@@ -11,8 +12,26 @@ const Container = styled.div.withConfig({
   justify-content: flex-end;
 `;
 
-const NavLink = styled.div.withConfig({
-  displayName: 'NavLink',
+const Link = styled(NavLink).withConfig({
+  displayName: 'Link',
+})`
+  align-items: center;
+  display: flex;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 900;
+  padding: 20px;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: #563F7A;
+    color: #fff;
+    cursor: pointer;
+  }
+`;
+
+const DummyLink = styled.span.withConfig({
+  displayName: 'DummyLink',
 })`
   align-items: center;
   display: flex;
@@ -31,10 +50,10 @@ const NavLink = styled.div.withConfig({
 
 const Header = () => (
   <Container>
-    <NavLink>Home</NavLink>
-    <NavLink>About</NavLink>
-    <NavLink>Calculator</NavLink>
-    <NavLink>Contact</NavLink>
+    <Link to="/">Home</Link>
+    <DummyLink>About</DummyLink>
+    <Link to="Calculator">Calculator</Link>
+    <DummyLink>Contact</DummyLink>
   </Container>
 );
 

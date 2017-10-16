@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Header from './Header';
 import Showcase from './Showcase';
 import Splash from './Splash';
 
@@ -19,7 +18,6 @@ const ShowcaseContainer = styled.div.withConfig({
 
 const Home = () => (
   <div>
-    <Header />
     <Splash>A slim and trim genetic calculator<br />to make your life just a little easier</Splash>
     <ShowcaseContainer>
       <Showcase>
