@@ -52,7 +52,7 @@ const Header = () => (
   <Container>
     <Link to="home">Home</Link>
     <DummyLink>About</DummyLink>
-    <Link to="calculator">Calculator</Link>
+    <Link to="breedlist">Calculator</Link>
     <DummyLink>Contact</DummyLink>
   </Container>
 );

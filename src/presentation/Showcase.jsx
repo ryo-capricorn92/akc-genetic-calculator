@@ -15,7 +15,7 @@ const Container = styled.section.withConfig({
   padding: 25px 20px;
   position: relative;
   text-align: justify;
-  min-width: 300px;
+  min-width: 250px;
   max-width: 450px;
 `;
 
