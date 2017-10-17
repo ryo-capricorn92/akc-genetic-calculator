@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import BreedItem from './BreedItem';
 
-const BreedList = styled.div.withConfig({
+const Container = styled.div.withConfig({
   displayName: 'BreedList',
 })`
   display: grid;
@@ -16,16 +16,16 @@ const BreedList = styled.div.withConfig({
   @media screen and (min-width: 2150px) { grid-template-columns: repeat(6, 1fr); }
 `;
 
-const Calculator = () => (
+const BreedList = () => (
   <div>
     <h1>Pick a breed</h1>
-    <BreedList>
+    <Container>
       <BreedItem
         img="http://cdn.akc.org/akccontentimages/BreedOfficialPortraits/hero/Bull-Terrier.jpg"
         name="Bull Terrier"
       />
-    </BreedList>
+    </Container>
   </div>
 );
 
-export default Calculator;
+export default BreedList;
