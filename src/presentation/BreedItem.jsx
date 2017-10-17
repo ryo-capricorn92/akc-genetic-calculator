@@ -15,13 +15,6 @@ const Container = styled.div.withConfig({
   max-width: 450px;
   min-width: 300px;
 
-  h3 {
-    font-weight: lighter;
-    margin: 0;
-    margin-bottom: 4px;
-    padding: 15px;
-  }
-
   &:hover {
     border: 1px solid rgba(86, 63, 122, 0.5);
     box-shadow: inset 0px -4px 0px #563F7A;
@@ -35,13 +28,22 @@ const Img = styled.img.withConfig({
   width: 100%;
 `;
 
+const Name = styled.h3.withConfig({
+  displayName: 'Name',
+})`
+  font-weight: lighter;
+  margin: 0;
+  margin-bottom: 4px;
+  padding: 15px;
+`;
+
 const BreedItem = ({ img, name }) => {
   const link = `calculator/${name.split(' ').join('-').toLowerCase()}`;
   return (
     <Link to={link}>
       <Container>
         <Img src={img} alt={name} />
-        <h3>{name}</h3>
+        <Name>{name}</Name>
       </Container>
     </Link>
   );
