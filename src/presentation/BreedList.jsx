@@ -24,6 +24,18 @@ const BreedList = () => (
         img="http://cdn.akc.org/akccontentimages/BreedOfficialPortraits/hero/Bull-Terrier.jpg"
         name="Bull Terrier"
       />
+      <BreedItem
+        img="http://cdn.akc.org/content/hero/ChineseCrestedheroimage.jpg"
+        name="Chinese Crested"
+      />
+      <BreedItem
+        img="http://cdn.akc.org/content/hero/MiniatureBullTerrierheroimage.jpg"
+        name="Miniature Bull Terrier"
+      />
+      <BreedItem
+        img="http://cdn.akc.org/content/hero/Xoloitzcuintliheroimage.jpg"
+        name="Xoloitzcuintli"
+      />
     </Container>
   </div>
 );
