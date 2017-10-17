@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import BreedItem from './BreedItem';
+import Search from './Search';
 
 const Container = styled.div.withConfig({
   displayName: 'BreedList',
@@ -11,6 +12,7 @@ const Container = styled.div.withConfig({
   grid-gap: 20px;
   grid-template-columns: repeat(3, 1fr);
   padding: 25px;
+  padding-top: 0;
 
   @media screen and (min-width: 1350px) { grid-template-columns: repeat(4, 1fr); }
   @media screen and (min-width: 1750px) { grid-template-columns: repeat(5, 1fr); }
@@ -27,6 +29,7 @@ const Spreader = styled.div.withConfig({
 const BreedList = () => (
   <div>
     <Spreader />
+    <Search />
     <Container>
       <BreedItem
         img="http://cdn.akc.org/akccontentimages/BreedOfficialPortraits/hero/Bull-Terrier.jpg"
