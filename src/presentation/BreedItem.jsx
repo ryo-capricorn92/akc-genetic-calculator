@@ -6,8 +6,10 @@ import styled from 'styled-components';
 const Container = styled.div.withConfig({
   displayName: 'Container',
 })`
-  border: 1px solid gray;
+  background-color: #fff;
+  border: 1px solid rgba(86, 63, 122, 0.3);
   border-radius: 3px;
+  box-shadow: 1px 1px 3px rgba(86, 63, 122, 0.25);
   display: inline-block;
   margin: auto;
   max-width: 450px;
@@ -21,6 +23,7 @@ const Container = styled.div.withConfig({
   }
 
   &:hover {
+    border: 1px solid rgba(86, 63, 122, 0.5);
     box-shadow: inset 0px -4px 0px #563F7A;
   }
 `;
@@ -28,6 +31,7 @@ const Container = styled.div.withConfig({
 const Img = styled.img.withConfig({
   displayName: 'Img',
 })`
+  border-radius: 3px 3px 0 0;
   width: 100%;
 `;
 

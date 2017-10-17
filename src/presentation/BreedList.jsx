@@ -6,6 +6,7 @@ import BreedItem from './BreedItem';
 const Container = styled.div.withConfig({
   displayName: 'BreedList',
 })`
+  background-color: #fff;
   display: grid;
   grid-gap: 20px;
   grid-template-columns: repeat(3, 1fr);
@@ -16,9 +17,16 @@ const Container = styled.div.withConfig({
   @media screen and (min-width: 2150px) { grid-template-columns: repeat(6, 1fr); }
 `;
 
+const Spreader = styled.div.withConfig({
+  displayName: 'Spreader',
+})`
+  background-color: #eeebf4;
+  height: 20px;
+`;
+
 const BreedList = () => (
   <div>
-    <h1>Pick a breed</h1>
+    <Spreader />
     <Container>
       <BreedItem
         img="http://cdn.akc.org/akccontentimages/BreedOfficialPortraits/hero/Bull-Terrier.jpg"
