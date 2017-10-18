@@ -3,6 +3,8 @@ import styled from 'styled-components';
 
 import Button from './Button';
 
+import { prettyPrint } from '../utils';
+
 const Container = styled.div.withConfig({
   displayName: 'Container',
 })`
@@ -25,16 +27,20 @@ const Results = styled.div.withConfig({
   padding: 15px;
 `;
 
-const Calculator = () => (
-  <Container>
-    <div>
-      <Button>Add Dam</Button>
-    </div>
-    <div>
-      <Button>Add Sire</Button>
-    </div>
-    <Results>Results</Results>
-  </Container>
-);
+const Calculator = ({ match }) => {
+  const { breed } = match.params;
+  const prettyBreed = prettyPrint(breed.split('-').join(' '));
+  return (
+    <Container>
+      <div>
+        <Button>Add Dam</Button>
+      </div>
+      <div>
+        <Button>Add Sire</Button>
+      </div>
+      <Results>{ prettyBreed }</Results>
+    </Container>
+  );
+};
 
 export default Calculator;
