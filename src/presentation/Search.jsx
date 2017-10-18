@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import Button from './Button';
+
 const Container = styled.div.withConfig({
   displayName: 'Container',
 })`
@@ -26,29 +28,11 @@ const SearchBox = styled.input.attrs({ type: 'text' }).withConfig({
   }
 `;
 
-const SearchButton = styled.button.attrs({ type: 'button' }).withConfig({
+const SearchButton = Button.extend.withConfig({
   displayName: 'SearchButton',
 })`
-  background-color: #563F7A;
-  border: none;
-  border-radius: 0;
-  color: #fff;
-  font-family: 'Open Sans', sans-serif;
   font-size: 18px;
-  font-weight: 700;
   letter-spacing: 1px;
-  outline: none;
-  padding: 10px;
-  text-transform: uppercase;
-
-  &:focus,
-  &:active {
-    outline: none;
-  }
-
-  &:hover {
-    cursor: pointer;
-  }
 `;
 
 const Search = () => (
