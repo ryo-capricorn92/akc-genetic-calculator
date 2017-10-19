@@ -6,8 +6,12 @@ import 'font-awesome/css/font-awesome.css';
 
 import './index.css';
 import App from './App';
+import configureStore from './configureStore';
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const store = configureStore();
+console.log(store);
+
+ReactDOM.render(<App store={store} />, document.getElementById('root'));
 registerServiceWorker();
 /* eslint-enable */
