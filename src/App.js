@@ -17,7 +17,7 @@ const Container = styled.div.withConfig({
 `;
 
 const HomeRedirect = () => (
-  <Redirect to="home" />
+  <Redirect to="/home" />
 );
 
 const App = () => (

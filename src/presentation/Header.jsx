@@ -8,6 +8,7 @@ const Container = styled.div.withConfig({
   background-color: #fff;
   box-shadow: inset 0px 4px 0px #563F7A;
   display: flex;
+  flex-shrink: 0;
   height: 90px;
   justify-content: flex-end;
 `;
@@ -50,9 +51,9 @@ const DummyLink = styled.span.withConfig({
 
 const Header = () => (
   <Container>
-    <Link to="home">Home</Link>
+    <Link to="/home">Home</Link>
     <DummyLink>About</DummyLink>
-    <Link to="breedlist">Calculator</Link>
+    <Link to="/breedlist">Calculator</Link>
     <DummyLink>Contact</DummyLink>
   </Container>
 );

@@ -16,7 +16,7 @@ const Container = styled.div.withConfig({
 const Img = styled.div.withConfig({
   displayName: 'Img',
 })`
-  background: #fff url('img/home.jpg') no-repeat center;
+  background: #fff url('../img/home.jpg') no-repeat center;
   background-size: cover;
   height: 400px;
   left: 0;
