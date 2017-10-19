@@ -1,6 +1,7 @@
-body {
+body, #root {
   margin: 0;
   padding: 0;
+  height: 100vh;
   font-family: sans-serif;
   min-width: 960px;
 }
