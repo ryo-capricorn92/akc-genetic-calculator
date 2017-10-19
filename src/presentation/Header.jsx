@@ -52,7 +52,7 @@ const DummyLink = styled.span.withConfig({
 const Header = () => (
   <Container>
     <Link to="/home">Home</Link>
-    <DummyLink>About</DummyLink>
+    <Link to="/test">About</Link>
     <Link to="/breedlist">Calculator</Link>
     <DummyLink>Contact</DummyLink>
   </Container>

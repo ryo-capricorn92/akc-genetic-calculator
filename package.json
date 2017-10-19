@@ -8,8 +8,11 @@
     "prop-types": "^15.6.0",
     "react": "^16.0.x",
     "react-dom": "^16.0.x",
+    "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.x",
     "react-scripts": "1.0.x",
+    "redux": "^3.7.2",
+    "redux-devtools-extension": "^2.13.2",
     "styled-components": "^2.2.x"
   },
   "scripts": {
